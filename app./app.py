@@ -230,10 +230,11 @@ fig.add_trace(go.Scatter(
     line=dict(color='#2ecc71', width=2, dash='dot'), yaxis='y2'
 ))
 
+# NEW FIXED CODE:
 fig.update_layout(
     xaxis=dict(title='72-Hour IST Timeline'),
-    yaxis=dict(title=label_name, titlefont=dict(color=color_code)),
-    yaxis2=dict(title='PBL Height (Meters)', titlefont=dict(color='#2ecc71'), overlaying='y', side='right'),
+    yaxis=dict(title=dict(text=label_name, font=dict(color=color_code))),
+    yaxis2=dict(title=dict(text='PBL Height (Meters)', font=dict(color='#2ecc71')), overlaying='y', side='right'),
     legend=dict(x=0.01, y=0.99),
     height=420,
     margin=dict(l=20, r=20, t=20, b=20)
